@@ -1,5 +1,8 @@
 const addTodoForm = document.querySelector("#addTodoForm");
 const addToDo = document.querySelector("#addToDo");
+let toDoText = document.querySelector("#addToDo");
+let toDoPriority = document.querySelector("#highPriority");
+let toProject = document.querySelector("#toProject");
 
 let toDosArray = [
   {
@@ -22,20 +25,20 @@ let toDosArray = [
   },
 ];
 
-document
-  .querySelector("addTodoForm")
-  .addEventListener("submit", TakeToDoFromForm);
-
 const TakeToDoFromForm = (
   toDoText = "",
   toDoPriority = "",
   toDoProject = ""
 ) => {
   const newTodo = {
-    text: document.querySelector("addToDo"),
-    priority: document.querySelector("highPriority"),
-    project: document.querySelector("addToDo"),
+    text: toDoText,
+    priority: toDoPriority,
+    project: toProject,
     completed: false,
   };
-  toDos = [newTodo, ...toDos];
+  toDos = [newTodo, ...toDosArray];
 };
+
+document
+  .querySelector("#addTodoForm")
+  .addEventListener("submit", TakeToDoFromForm);
