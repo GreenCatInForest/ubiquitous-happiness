@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>ToDo App</h1>
+      <h2>ToDo helper to deal with procrastination</h2>
+    </header>
+
+    <main>
+      <!--
+      <section class="priorityToDos"></section>
+      <section class="projectsToDos">
+        <article>Work Projects</article>
+        <article>WellBeing Projects</article>
+        <article>Relief & Relax</article>
+      </section> -->
+
+      <section class="addToDos">
+        <form id="addTodoForm">
+          <label for="addToDo">Add a new ToDo</label>
+          <input
+            type="text"
+            id="addToDo"
+            name="addToDo"
+            placeholder="I wish ToDo this"
+          />
+          <!--<form id="addClassToDo">
+            <label for="priority">Priority:</label>
+            <input type="range" id="priority" name="priority" min="0" max="4">
+            <input type="submit">
+              </form> -->
+
+          <label for="highPriority">Priority: high</label>
+          <input
+            type="checkbox"
+            id="highPriority"
+            name="highPriority"
+            value="priorityToDo"
+          />
+          <label for="projects"> Related project:</label>
+          <input
+            list="projects"
+            id="toProject"
+            name="toProject"
+            placeholder="put ToDo to project"
+          />
+          <datalist id="projects">
+            <option value="Work Projects"></option>
+            <option value="WellBeing Projects"></option>
+            <option value="Relief & Relax"></option>
+          </datalist>
+          <button type="submit">Add</button>
+        </form>
+      </section>
+
+      <section class="allToDos">
+        <h3>My ToDos</h3>
+        <p id="textNoToDos">
+          You have no To Do plans in the app. Put here something nice!
+        </p>
+      </section>
+
+      <section></section>
+    </main>
+    <footer>
+      <h6></h6>
+      <p></p>
+      <p></p>
+      <p></p>
+    </footer>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>
