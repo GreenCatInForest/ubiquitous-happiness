@@ -29,10 +29,24 @@ const handleNewToDo = (event) => {
   projectList.value = "";
 
   console.log(allToDoListOnPage);
+
+  renderToDoList();
 };
 addToDoForm.addEventListener("submit", handleNewToDo);
 
-const generateToDoCard = () => {};
+const generateToDoCard = () => {
+  const toDoCardContainer = document.createElement("li");
+  const toDoCardText = document.createElement("span");
+  const toDoCardButton = document.createElement("button");
+  const toDoCardCompleteCheck = document.createElement("input");
+
+  toDoCardContainer.classList.add("toDoCardContainer");
+  toDoCardText.classList.add("toDoCardText");
+  toDoCardButton.classList.add("toDoDeleteButton");
+  toDoCardCompleteCheck.add("type", "checkbox");
+
+  toDoCardContainer;
+};
 
 //taking data from the form by addEventListener directly
 // Not reasonable, I think, I will go with handler, but I want to save it.
